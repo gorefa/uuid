@@ -4,7 +4,7 @@ version: "{build}"
 # Operating system (build VM template)
 os: Windows Server 2012 R2
 
-clone_folder: c:\gopath\src\github.com\myesui\uuid
+clone_folder: c:\gopath\src\github.com\gorefa\uuid
 
 # environment variables
 environment:

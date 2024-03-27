@@ -2,7 +2,7 @@ language: go
 
 sudo: false
 
-go_import_path: github.com/myesui/uuid
+go_import_path: github.com/gorefa/uuid
 
 go:
     - 1.8
@@ -26,7 +26,7 @@ before_install:
     - go get github.com/mattn/goveralls
 
 script:
-    - go test -v -race github.com/myesui/uuid
+    - go test -v -race github.com/gorefa/uuid
     - go test -v -covermode=count -coverprofile=cover.out
     - goveralls -coverprofile=cover.out -service=travis-ci
 

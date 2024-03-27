@@ -1,12 +1,12 @@
 Go UUID implementation
 ========================
 
-[![license](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/myesui/uuid/master/LICENSE)
-[![GoDoc](http://godoc.org/github.com/myesui/uuid?status.png)](http://godoc.org/github.com/myesui/uuid)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/myesui/uuid?branch=master&svg=true)](https://ci.appveyor.com/project/myesui/uuid)
-[![Build Status](https://travis-ci.org/myesui/uuid.png?branch=master)](https://travis-ci.org/myesui/uuid)
-[![Coverage Status](https://coveralls.io/repos/github/myesui/uuid/badge.svg?branch=master)](https://coveralls.io/github/myesui/uuid?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/myesui/uuid)](https://goreportcard.com/report/github.com/myesui/uuid)
+[![license](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gorefa/uuid/master/LICENSE)
+[![GoDoc](http://godoc.org/github.com/gorefa/uuid?status.png)](http://godoc.org/github.com/gorefa/uuid)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/gorefa/uuid?branch=master&svg=true)](https://ci.appveyor.com/project/gorefa/uuid)
+[![Build Status](https://travis-ci.org/gorefa/uuid.png?branch=master)](https://travis-ci.org/gorefa/uuid)
+[![Coverage Status](https://coveralls.io/repos/github/gorefa/uuid/badge.svg?branch=master)](https://coveralls.io/github/gorefa/uuid?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gorefa/uuid)](https://goreportcard.com/report/github.com/gorefa/uuid)
 
 This package provides RFC 4122 and DCE 1.1 compliant UUIDs.
 It will generate the following:
@@ -32,19 +32,19 @@ Will generally support last 3 versions of Go.
 
 Use the `go` tool:
 
-	$ go get gopkg.in/myesui/uuid.v1
+	$ go get gopkg.in/gorefa/uuid.v1
 	
 
 See [gopkg.in](http://labix.org/gopkg.in)
 
 # Typical Usage
 
-See [documentation and examples](http://godoc.org/github.com/myesui/uuid)
+See [documentation and examples](http://godoc.org/github.com/gorefa/uuid)
 for more information.
 
 ## All UUIDs
 
-    import "gopkg.in/myesui/uuid.v1"
+    import "gopkg.in/gorefa/uuid.v1"
 
     id, _ := uuid.Parse("6ba7b810-9dad-11d1-80b4-00c04fd430c8")
 
@@ -106,7 +106,7 @@ for more information.
 
 ## Version 1 and 2 UUIDs
 
-    import "gopkg.in/myesui/uuid.v1"
+    import "gopkg.in/gorefa/uuid.v1"
 
     id := uuid.NewV1()
     fmt.Println(id)
@@ -137,7 +137,7 @@ for more information.
 
 ## Version 3 and 5 UUIDs
 
-    import "gopkg.in/myesui/uuid.v1"
+    import "gopkg.in/gorefa/uuid.v1"
 
     id := uuid.NewV3(uuid.NameSpaceURL, uuid.Name("www.example.com"))
     fmt.Println(id)
@@ -153,7 +153,7 @@ for more information.
 
 ## Version 4 UUIDs
 
-    import "gopkg.in/myesui/uuid.v1"
+    import "gopkg.in/gorefa/uuid.v1"
 
     // A V4 UUID will panic by default if the systems CPRNG fails - this can
     // be changed by registering your own generator
@@ -174,7 +174,7 @@ for more information.
 
 ## Custom Generators
 
-    import "gopkg.in/myesui/uuid.v1"
+    import "gopkg.in/gorefa/uuid.v1"
 
     // Improve resolution for V1 and 2 UUIDs
     // The resolution correlates to how many ids can be created before waiting
@@ -241,20 +241,20 @@ for more information.
 
 ## Coverage
 
-* go test -coverprofile cover.out github.com/myesui/uuid
-* go test -coverprofile cover.out github.com/myesui/uuid/savers
+* go test -coverprofile cover.out github.com/gorefa/uuid
+* go test -coverprofile cover.out github.com/gorefa/uuid/savers
 
 * go tool cover -html=cover.out -o cover.html
 
 ## Contribution 
 
 1. fork from the *master* branch to create your own fork
-2. clone from *master* into $GOPATH/src/github.com/myesui/uuid
+2. clone from *master* into $GOPATH/src/github.com/gorefa/uuid
 3. git remote add `username` https://github.com/username/uuid.git
 4. push changes on your fork and track your remote
 5. Remember to create a branch
 
-To ensure you get the correct packages and subpackages install in a gopath which matches *go/src/github.com/myesui/uuid*
+To ensure you get the correct packages and subpackages install in a gopath which matches *go/src/github.com/gorefa/uuid*
 
 ## Links
 
@@ -307,5 +307,5 @@ setting for your server
 
 ## Copyright
 
-Copyright (C) 2017 myesui@github.com
-See [LICENSE](https://github.com/myesui/uuid/tree/master/LICENSE) file for details.
+Copyright (C) 2017 gorefa@github.com
+See [LICENSE](https://github.com/gorefa/uuid/tree/master/LICENSE) file for details.

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/url"
 	"time"
-	"github.com/myesui/uuid"
-	"github.com/myesui/uuid/savers"
+	"github.com/gorefa/uuid"
+	"github.com/gorefa/uuid/savers"
 )
 
 func Example() {

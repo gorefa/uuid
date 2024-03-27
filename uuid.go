@@ -12,7 +12,7 @@
 //
 // The example code in the specification was also used as reference for design.
 //
-// Copyright (C) 2016 myesui@github.com  2016 MIT licence
+// Copyright (C) 2016 gorefa@github.com  2016 MIT licence
 package uuid
 
 import (

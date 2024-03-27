@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 	"time"
-	"github.com/myesui/uuid"
+	"github.com/gorefa/uuid"
 	"log"
 	"io/ioutil"
 )
@@ -51,11 +51,11 @@ func TestFileSystemSaver_SaveSchedule(t *testing.T) {
 
 func TestFileSystemSaver_Read(t *testing.T) {
 	paths := []string{
-		path.Join(os.TempDir(), "test", "myesui.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"),
-		path.Join(os.TempDir(), "myesui.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"),
-		path.Join("myesui.uuid.generator-" + uuid.NewV1().String()[:8] + ".gob"),
-		path.Join("/myesui.uuid.generator-" + uuid.NewV1().String()[:8] + ".gob"),
-		path.Join("/myesui.uuid.generator-" + uuid.NewV1().String()[:8]),
+		path.Join(os.TempDir(), "test", "gorefa.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"),
+		path.Join(os.TempDir(), "gorefa.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"),
+		path.Join("gorefa.uuid.generator-" + uuid.NewV1().String()[:8] + ".gob"),
+		path.Join("/gorefa.uuid.generator-" + uuid.NewV1().String()[:8] + ".gob"),
+		path.Join("/gorefa.uuid.generator-" + uuid.NewV1().String()[:8]),
 		path.Join("/generator-" + uuid.NewV1().String()[:8]),
 	}
 
@@ -101,7 +101,7 @@ func TestFileSystemSaver_Read(t *testing.T) {
 
 func TestFileSystemSaver_Save(t *testing.T) {
 
-	saver := setupFileSystemStateSaver(path.Join("myesui.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"), true)
+	saver := setupFileSystemStateSaver(path.Join("gorefa.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"), true)
 
 	// Read is always called first
 	saver.Read()
@@ -120,7 +120,7 @@ func TestFileSystemSaver_Save(t *testing.T) {
 
 func TestFileSystemSaver_SaveAndRead(t *testing.T) {
 
-	saver := setupFileSystemStateSaver(path.Join("myesui.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"), true)
+	saver := setupFileSystemStateSaver(path.Join("gorefa.uuid.generator-"+uuid.NewV1().String()[:8]+".gob"), true)
 
 	// Read is always called first
 	_, err := saver.Read()

@@ -3,7 +3,7 @@ package savers
 
 import (
 	"encoding/gob"
-	"github.com/myesui/uuid"
+	"github.com/gorefa/uuid"
 	"log"
 	"os"
 	"path"
@@ -40,7 +40,7 @@ type FileSystemSaver struct {
 func (o *FileSystemSaver) Init() uuid.Saver {
 	o.Logger = log.New(os.Stderr, "uuid-saver", log.LstdFlags)
 	o.Duration = 10 * time.Second
-	o.Path = path.Join(os.TempDir(), "myesui-uuid-generator-fs-saver.gob")
+	o.Path = path.Join(os.TempDir(), "gorefa-uuid-generator-fs-saver.gob")
 	o.Timestamp = uuid.Now()
 	return o
 }

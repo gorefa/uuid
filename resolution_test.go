@@ -1,7 +1,7 @@
 package uuid_test
 
 import (
-	. "github.com/myesui/uuid"
+	. "github.com/gorefa/uuid"
 	"testing"
 	"log"
 	"io/ioutil"
